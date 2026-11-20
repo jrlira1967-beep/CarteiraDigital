@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Depósito</title>
+</head>
+<body>
+<h1>Depósito</h1>
+
+<label>Conta:</label>
+<input type="text" id="conta" />
+<br><br>
+
+<label>Valor:</label>
+<input type="number" id="valor" />
+<br><br>
+
+<button id="btn-depositar" onclick="depositar()">Depositar</button>
+
+<p id="mensagem"></p>
+
+<script>
+    function depositar() {
+        const conta = document.getElementById('conta').value;
+        const valor = document.getElementById('valor').value;
+        document.getElementById('mensagem').innerText =
+            'Depósito de R$ ' + valor + ' na conta ' + conta + ' realizado!';
+    }
+</script>
+</body>
+</html>
