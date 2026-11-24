@@ -18,21 +18,21 @@ public class CarteiraController {
 
     // GET /carteiras/1/saldo -> 200
     @GetMapping("/{id}/saldo")
-    public ResponseEntity<Double> consultarSaldo(@PathVariable Long id) {
+    public ResponseEntity<Double> consultarSaldo(@PathVariable("id") Long id) {
         double saldo = service.consultarSaldo(id);
         return ResponseEntity.ok(saldo);
     }
 
     // POST /carteiras/1/depositar -> 200
     @PostMapping("/{id}/depositar")
-    public ResponseEntity<Carteira> depositar(@PathVariable Long id, @RequestBody ValorRequest request) {
+    public ResponseEntity<Carteira> depositar(@PathVariable("id") Long id, @RequestBody ValorRequest request) {
         Carteira carteira = service.depositar(id, request.valor());
         return ResponseEntity.ok(carteira);
     }
 
     // POST /carteiras/1/sacar -> 200
     @PostMapping("/{id}/sacar")
-    public ResponseEntity<Carteira> sacar(@PathVariable Long id, @RequestBody ValorRequest request) {
+    public ResponseEntity<Carteira> sacar(@PathVariable("id") Long id, @RequestBody ValorRequest request) {
         Carteira carteira = service.sacar(id, request.valor());
         return ResponseEntity.ok(carteira);
     }

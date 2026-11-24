@@ -1,4 +1,4 @@
-package CarteiraControllerTest;
+package com.example.wallet.controller;
 
 import com.example.wallet.entity.Carteira;
 import com.example.wallet.exception.SaldoInsuficienteException;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(CarteiraControllerTest.class)
+@WebMvcTest(CarteiraController.class)
 class CarteiraControllerTest {
 
     @Autowired
